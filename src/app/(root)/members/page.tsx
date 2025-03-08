@@ -116,15 +116,33 @@ const Members = () => {
       gmail: "mailto:22bec010@iiitdmj.ac.in",
       image: "/cocoordinator.jpg"
     },
-    // {
-    //   name: "John Doe",
-    //   description: "Software Engineer",
-    //   linkedin: "https://linkedin.com/in/johndoe",
-    //   twitter: "https://twitter.com/johndoe",
-    //   instagram: "https://instagram.com/johndoe",
-    //   gmail: "mailto:johndoe@gmail.com",
-    //   image: "/path/to/image9.jpg"
-    // },
+    {
+      name: "John Doe",
+      description: "Software Engineer",
+      linkedin: "https://linkedin.com/in/johndoe",
+      twitter: "https://twitter.com/johndoe",
+      instagram: "https://instagram.com/johndoe",
+      gmail: "mailto:johndoe@gmail.com",
+      image: "/path/to/image9.jpg"
+    },
+    {
+        name: "John Doe",
+        description: "Software Engineer",
+        linkedin: "https://linkedin.com/in/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        instagram: "https://instagram.com/johndoe",
+        gmail: "mailto:johndoe@gmail.com",
+        image: "/path/to/image9.jpg"
+      },
+      {
+        name: "John Doe",
+        description: "Software Engineer",
+        linkedin: "https://linkedin.com/in/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        instagram: "https://instagram.com/johndoe",
+        gmail: "mailto:johndoe@gmail.com",
+        image: "/path/to/image9.jpg"
+      },
 
   ];
 
