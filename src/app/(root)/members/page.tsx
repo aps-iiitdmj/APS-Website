@@ -9,6 +9,7 @@ import { ButtonsCard } from "../../../components/ui/tailwindcss-buttons";
 import { Navbar } from "@/components/ui/Navbar";
 import { useRouter } from "next/navigation";
 import Button from "@/components/button";
+import MemberSets from "./MemberSets";
 
 const Members = () => {
 
@@ -34,7 +35,7 @@ const Members = () => {
     return isMobile ? <NavbarMobile /> : <Navbar />;
   };
 
-  const members = [
+  const members_2020 = [
     {
       name: "Abhay Singh",
       description: "Coordinator",
@@ -106,33 +107,18 @@ const Members = () => {
       // instagram: "https://www.instagram.com/158alokrai?igsh=bm9nbXp1eW84aHhs",
       // gmail: "mailto:22bec010@iiitdmj.ac.in",
       image: "/pallavi.jpg"
-    },
+    }
+  ];
+
+  const members_2021 = [
     {
-      name: "Alok Rai",
-      description: "Co-Coordinator",
-      linkedin: "http://linkedin.com/in/alok-rai158",
-      // twitter: "https://twitter.com/johndoe",
-      instagram: "https://www.instagram.com/158alokrai?igsh=bm9nbXp1eW84aHhs",
-      gmail: "mailto:22bec010@iiitdmj.ac.in",
-      image: "/cocoordinator.jpg"
-    },
-    {
-      name: "John Doe",
-      description: "Software Engineer",
-      linkedin: "https://linkedin.com/in/johndoe",
-      twitter: "https://twitter.com/johndoe",
-      instagram: "https://instagram.com/johndoe",
-      gmail: "mailto:johndoe@gmail.com",
-      image: "/path/to/image9.jpg"
-    },
-    {
-        name: "John Doe",
-        description: "Software Engineer",
-        linkedin: "https://linkedin.com/in/johndoe",
-        twitter: "https://twitter.com/johndoe",
-        instagram: "https://instagram.com/johndoe",
-        gmail: "mailto:johndoe@gmail.com",
-        image: "/path/to/image9.jpg"
+        name: "Alok Rai",
+        description: "Co-Coordinator",
+        linkedin: "http://linkedin.com/in/alok-rai158",
+        // twitter: "https://twitter.com/johndoe",
+        instagram: "https://www.instagram.com/158alokrai?igsh=bm9nbXp1eW84aHhs",
+        gmail: "mailto:22bec010@iiitdmj.ac.in",
+        image: "/cocoordinator.jpg"
       },
       {
         name: "John Doe",
@@ -143,8 +129,26 @@ const Members = () => {
         gmail: "mailto:johndoe@gmail.com",
         image: "/path/to/image9.jpg"
       },
+      {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        ];
 
-  ];
 
   return (
     <div className="main">
@@ -174,42 +178,14 @@ const Members = () => {
         <h1 className="font-jetbrains-mono text-4xl text-white text-center pb-10">
           THE CREW
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10 px-4 md:ml-5 md:mr-5 lg:ml-28 lg:mr-28 pb-10 md:pb-5">
-          {members.map((member, index) => (
-            <div
-              key={index}
-              className="bg-gray-600 shadow-md rounded-lg p-4 backdrop-blur-md bg-opacity-30 border-2 border-white/[0.2] ">
-              <div className="header h-72 bg-gray-200 rounded-md mb-4 backdrop-blur-md bg-opacity-60">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md"
-                />
-              </div>
-              {/* <div className="relative w-full h-full">
-                
-              </div> */}
-              <h2 className="font-jetbrains-mono font-bold text-neutral-200 dark:text-neutral-200 mb-2 mt-2">{member.name}</h2>
-              <p className="font-sans font-normal text-teal-400 text-xs dark:text-neutral-300">{member.description}</p>
-              <div className="flex space-x-4 mt-4 mb-4">
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="mr-2">
-                  <img src="linkedin.png" alt="LinkedIn" className="w-4 h-4" />
-                </a>
-                <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="mr-2">
-                  <img src="x.png" alt="Twitter" className="w-4 h-4" />
-                </a>
-                <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="mr-2">
-                  <img src="instagram.png" alt="Instagram" className="w-4 h-4" />
-                </a>
-                <a href={member.gmail} target="_blank" rel="noopener noreferrer" className="mr-2">
-                  <img src="/gmail.png" alt="Gmail" className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+
+
+      {/* pehle component me type change karna phir data change karna */}
+      <MemberSets members={members_2020} year={'Orion'}/>
+      <MemberSets members={members_2021} year={'Leo'}/>
+
+      <hr className="border-2 border-white w-full mx-auto " />
+
       </div>
       <div className="abouttext  flex flex-col md:flex-row justify-center">
         <div className="pt-20 pb-20 px-12 md:pl-20 md:pr-20 md:w-1/2">
@@ -225,6 +201,5 @@ const Members = () => {
 
     </div>
   );
-};
-
+}
 export default Members
