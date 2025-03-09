@@ -35,7 +35,7 @@ const Members = () => {
     return isMobile ? <NavbarMobile /> : <Navbar />;
   };
 
-  const members_2020 = [
+  const members_2021 = [
     {
       name: "Abhay Singh",
       description: "Coordinator",
@@ -110,7 +110,85 @@ const Members = () => {
     }
   ];
 
-  const members_2021 = [
+  const members_2022 = [
+    {
+        name: "Alok Rai",
+        description: "Co-Coordinator",
+        linkedin: "http://linkedin.com/in/alok-rai158",
+        // twitter: "https://twitter.com/johndoe",
+        instagram: "https://www.instagram.com/158alokrai?igsh=bm9nbXp1eW84aHhs",
+        gmail: "mailto:22bec010@iiitdmj.ac.in",
+        image: "/cocoordinator.jpg"
+      },
+      {
+        name: "John Doe",
+        description: "Software Engineer",
+        linkedin: "https://linkedin.com/in/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        instagram: "https://instagram.com/johndoe",
+        gmail: "mailto:johndoe@gmail.com",
+        image: "/path/to/image9.jpg"
+      },
+      {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        ];
+  
+  const members_2023 = [
+    {
+        name: "Alok Rai",
+        description: "Co-Coordinator",
+        linkedin: "http://linkedin.com/in/alok-rai158",
+        // twitter: "https://twitter.com/johndoe",
+        instagram: "https://www.instagram.com/158alokrai?igsh=bm9nbXp1eW84aHhs",
+        gmail: "mailto:22bec010@iiitdmj.ac.in",
+        image: "/cocoordinator.jpg"
+      },
+      {
+        name: "John Doe",
+        description: "Software Engineer",
+        linkedin: "https://linkedin.com/in/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        instagram: "https://instagram.com/johndoe",
+        gmail: "mailto:johndoe@gmail.com",
+        image: "/path/to/image9.jpg"
+      },
+      {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        {
+          name: "John Doe",
+          description: "Software Engineer",
+          linkedin: "https://linkedin.com/in/johndoe",
+          twitter: "https://twitter.com/johndoe",
+          instagram: "https://instagram.com/johndoe",
+          gmail: "mailto:johndoe@gmail.com",
+          image: "/path/to/image9.jpg"
+        },
+        ];
+  
+  const members_2024 = [
     {
         name: "Alok Rai",
         description: "Co-Coordinator",
@@ -149,7 +227,6 @@ const Members = () => {
         },
         ];
 
-
   return (
     <div className="main">
       <div className="relative w-full flex items-center justify-end">
@@ -181,10 +258,12 @@ const Members = () => {
 
 
       {/* pehle component me type change karna phir data change karna */}
-      <MemberSets members={members_2020} year={'Orion'}/>
-      <MemberSets members={members_2021} year={'Leo'}/>
+      <MemberSets members={members_2021} year={'Orion'}/>
+      <MemberSets members={members_2022} year={'Leo'}/>
+      <MemberSets members={members_2023} year={'Canis Majoris'}/>
+      <MemberSets members={members_2024} year={'Canis Minoris'}/>
 
-      <hr className="border-2 border-white w-full mx-auto " />
+      <hr className="border-2 border-white w-full mx-auto " />  
 
       </div>
       <div className="abouttext  flex flex-col md:flex-row justify-center">

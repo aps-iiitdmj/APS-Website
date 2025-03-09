@@ -10,35 +10,30 @@ interface MemberSetsProps {
   }
 
 
-const buttonStyle = {scale:'2.5', marginRight:'10px'};
+const buttonStyle = {scale:'2', marginRight:'10px'};
 
 function MemberSets({members, year}: MemberSetsProps) {
 
     const [Open, setOpen] = useState(false);
 
   return (
-    <main className='mt-[15px]'>
+    <main className='mt-[5px] h-full'>
     <hr className="border-2 border-white w-full mx-auto " />
-        <div className="flex justify-between mt-auto">
-            <span className="inline-block text-white  font-jetbrains-mono text-2xl h-[50px] align-middle">
+        <div 
+          className="flex mb-4 justify-between bg-gray-600 shadow-md rounded-b-lg p-2 backdrop-blur-md bg-opacity-30 border-2 border-white/[0.2]">
+            
+            <span className="inline-block text-white  font-jetbrains-mono text-2xl h-[50px] pt-2 pb-2 ml-5">
                 {year} 
             </span>
             <button onClick={() => setOpen(!Open)}>
                 {Open ? <HiBarsArrowUp style={buttonStyle}/>: <HiBarsArrowDown style={buttonStyle}/>}
-                
             </button>
 
         </div>
-        <motion.div
-            animate={Open ? "open" : "closed"}
-            style={{ originY: "top" }}
-            variants={wrapperVariants}
-        >
-            {
-                Open ?
-                <CardSets members={members} /> : null
-            }
-        </motion.div>
+        
+
+        <CardSets members={members} state={Open}/>
+
 
 
         
@@ -50,9 +45,13 @@ function MemberSets({members, year}: MemberSetsProps) {
 export default MemberSets
 
 
-function CardSets({members}: any) {
+function CardSets({members, state}: any, boolean: any) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10 px-4 md:ml-5 md:mr-5 lg:ml-28 lg:mr-28 pb-10 md:pb-5">
+    <motion.div
+    animate={state ? "open" : "closed"}
+    style={{ originY: "top", height:state?'auto':'0px'}}
+    variants={wrapperVariants}   
+    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10 px-4 md:ml-5 md:mr-5 lg:ml-28 lg:mr-28 pb-10 md:pb-5">
         {members.map((member:any, index:number) => (
             <div
             key={index}
@@ -85,27 +84,28 @@ function CardSets({members}: any) {
             </div>
             </div>
         ))}    
-    </div>
+    </motion.div>
   )
 }
 
 
 const wrapperVariants = {
     closed: {
-      scaleY: 0,
-      transition: {
-        ease: ["easeIn", "easeOut"],
+      scaleY: 0,  
+      height: '0px',
+      opacity: 0, 
+      transition: {  
         when: "afterChildren",
-        duration: 0.3,
+        duration: 0.2
       },
     },
     open: {
-      scaleY: 1,
-      y: -10,
+      scaleY: 1,  
+      height:'auto',
+      opacity: 1,
       transition: {
-        ease: ["easeIn", "easeOut"],
         whenL:"beforeChildren",
-        duration: 0.3,
+        duration: 0.2
 
       },
     },
