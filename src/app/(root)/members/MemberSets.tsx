@@ -14,7 +14,7 @@ const buttonStyle = {scale:'2', marginRight:'10px'};
 
 function MemberSets({members, year}: MemberSetsProps) {
 
-    const [Open, setOpen] = useState(false);
+    const [Open, setOpen] = useState(year=='Orion'?true:false);
 
   return (
     <main className='mt-[5px] h-full'>
@@ -33,10 +33,6 @@ function MemberSets({members, year}: MemberSetsProps) {
         
 
         <CardSets members={members} state={Open}/>
-
-
-
-        
 
   </main>
   )
@@ -91,21 +87,21 @@ function CardSets({members, state}: any, boolean: any) {
 
 const wrapperVariants = {
     closed: {
-      scaleY: 0,  
       height: '0px',
       opacity: 0, 
       transition: {  
+        type: "ease",
         when: "afterChildren",
-        duration: 0.2
+        duration: 0.3
       },
     },
     open: {
-      scaleY: 1,  
       height:'auto',
       opacity: 1,
       transition: {
+        type: "ease",
         whenL:"beforeChildren",
-        duration: 0.2
+        duration: 0.3
 
       },
     },

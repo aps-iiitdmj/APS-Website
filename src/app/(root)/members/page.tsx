@@ -257,7 +257,6 @@ const Members = () => {
         </h1>
 
 
-      {/* pehle component me type change karna phir data change karna */}
       <MemberSets members={members_2021} year={'Orion'}/>
       <MemberSets members={members_2022} year={'Leo'}/>
       <MemberSets members={members_2023} year={'Canis Majoris'}/>
