@@ -45,7 +45,7 @@ const Events = () => {
         {renderNavbar()}
       </div>
       {/* <div className="logo"> */}
-      <div className="logo relative -mt-5 z-10">
+      <div className="logo relative -mt-5 z-10 w-full">
         {/* <Image src="/aboutbanner.jpg" alt="banner" width={1000} height={1000} layout="responsive" /> */}
         <Image
           src="/events.png"
@@ -59,7 +59,7 @@ const Events = () => {
 
       <div className={styles.mainsection}>
         <div className="abouttext bg-grey-600 flex flex-col lg:flex-row justify-center">
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               Telescope Session
             </h1>
@@ -95,7 +95,7 @@ const Events = () => {
               objectFit="cover"
             />
           </div>
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               JWST Workshop
             </h1>
@@ -112,9 +112,9 @@ const Events = () => {
         </div>
 
         <div className="abouttext bg-grey-600 flex flex-col lg:flex-row justify-center">
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
-              Astrophotography
+            Astrophotography Session
             </h1>
 
             <p className="mt-6 text-teal-400 text-balance">
@@ -148,7 +148,7 @@ const Events = () => {
               objectFit="cover"
             />
           </div>
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               Elysium - Case Study
             </h1>
@@ -167,7 +167,7 @@ const Events = () => {
         </div>
 
         <div className="abouttext bg-grey-600 flex flex-col lg:flex-row justify-center">
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               Telescope Workshop
             </h1>
@@ -204,7 +204,7 @@ const Events = () => {
               objectFit="cover"
             />
           </div>
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               Cosmic Showdown
             </h1>
@@ -219,7 +219,7 @@ const Events = () => {
         </div>
 
         <div className="abouttext bg-grey-600 flex flex-col lg:flex-row justify-center">
-          <div className="pt-20 pb-20 px-4 pl-20 pr-20 lg:pl-32 lg:pr-32 lg:w-1/2">
+          <div className="pt-20 pb-20 px-4  lg:pl-32 lg:pr-32 lg:w-1/2">
             <h1 className="font-jetbrains-mono text-4xl text-white ">
               Treasure Hunt
             </h1>
